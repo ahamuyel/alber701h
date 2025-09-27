@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function HomeSection() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-r from-red-500 to-purple-600">
       <div className="text-center">
         <h2 className="text-5xl font-bold mb-4">Oi, eu sou Alberto Hamuyela</h2>
         <p className="text-xl mb-6">Desenvolvedor apaixonado por criar experiências web incríveis</p>

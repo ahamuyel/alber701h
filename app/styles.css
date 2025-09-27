@@ -1,0 +1,92 @@
+/* Defining base variables for light mode */
+:root {
+  --background: #f5f7fa; /* Light gray-blue for background */
+  --primary: #1e40af; /* Vibrant blue as primary color */
+  --accent: #3b82f6; /* Lighter blue for highlights */
+  --text: #1f2937; /* Dark gray for text */
+  --secondary: #4b5563; /* Muted gray for secondary elements */
+  --font-family-base: 'Poppins', sans-serif;
+  --font-size-base: 16px;
+  --padding-base: 1rem;
+  --border-radius: 0.4rem; /* Consistent with Tailwind's rounded-md */
+
+  --padding-btn: 0.4rem 0.8rem;
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+  --background: #1e293b; /* Dark slate for background */
+  --primary: #60a5fa; /* Lighter blue for dark mode */
+  --accent: #93c5fd; /* Soft blue for accents */
+  --text: #e2e8f0; /* Light gray for text */
+  --secondary: #94a3b8; /* Muted gray for secondary elements */
+}
+
+/* Navbar styles */
+nav {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for light mode */
+  backdrop-filter: blur(10px); /* Subtle blur effect */
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] nav {
+  background: rgba(30, 41, 59, 0.1); /* Semi-transparent dark for dark mode */
+}
+
+/* NavLinks styles */
+.nav-link {
+  color: var(--text);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+/* MobileMenu styles */
+.mobile-menu {
+  background: transparent;
+  /* transition: background-color 0.3s ease; */
+}
+
+/* CTAButton styles */
+.cta-button {
+  background: var(--primary);
+  color: #ffffff;
+  border-radius: var(--border-radius);
+  padding: var(--padding-btn);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--accent);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--primary);
+  color: #ffffff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 20;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  transform: scale(1.1);
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: var(--accent);
+}
