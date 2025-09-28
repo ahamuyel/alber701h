@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className="p-4 fixed w-full top-0 z-10">
+      <nav className="p-4 fixed w-full top-0 z-50 bg-gradient-to-r from-teal-600/80 to-coral-500/80 backdrop-blur-md">
         <div className="container mx-auto flex justify-between items-center">
           <Logo />
           <ul className="flex space-x-6">
@@ -38,7 +38,7 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6 text-accent"
+              className="w-6 h-6 text-coral-500"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -56,7 +56,7 @@ export default function Navbar() {
         <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} />
       </nav>
       <button
-        className="theme-toggle"
+        className="theme-toggle fixed bottom-8 right-4 p-2 bg-teal-600 text-white rounded-full hover:bg-coral-500 transition-colors"
         onClick={toggleTheme}
         aria-label="Toggle theme"
       >

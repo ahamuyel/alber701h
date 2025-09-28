@@ -86,16 +86,6 @@ nav {
   background: #000;
 } */
 
-.home-btn {
-  background-color: #ffffff;
-  color: #0d47a1;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.home-btn:hover {
-  background-color: #e0f7fa;
-}
 section#home {
   background: var(--background);
   color: var(--text);
@@ -114,7 +104,7 @@ section#home p {
 }
 
 section#home .home-btn {
-  border: solid 0.14rem var(--text);
+  border: solid 0.14rem white;
   border-radius: var(--border-radius);
   padding: var(--padding-btn);
   transition: background-color 0.3s ease, color 0.3s ease;
