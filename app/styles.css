@@ -1,36 +1,22 @@
-/* Defining base variables for light mode */
-:root {
-  --background: #f5f7fa; /* Light gray-blue for background */
-  --primary: #1e40af; /* Vibrant blue as primary color */
-  --accent: #3b82f6; /* Lighter blue for highlights */
-  --text: #1f2937; /* Dark gray for text */
-  --secondary: #4b5563; /* Muted gray for secondary elements */
-  --font-family-base: 'Poppins', sans-serif;
-  --font-size-base: 16px;
-  --padding-base: 1rem;
-  --border-radius: 0.4rem; /* Consistent with Tailwind's rounded-md */
+@import url(./globals.css);
 
-  --padding-btn: 0.4rem 0.8rem;
-}
-
-/* Dark mode variables */
-[data-theme="dark"] {
-  --background: #1e293b; /* Dark slate for background */
-  --primary: #60a5fa; /* Lighter blue for dark mode */
-  --accent: #93c5fd; /* Soft blue for accents */
-  --text: #e2e8f0; /* Light gray for text */
-  --secondary: #94a3b8; /* Muted gray for secondary elements */
+body {
+  background-color: var(--background);
 }
 
 /* Navbar styles */
 nav {
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for light mode */
-  backdrop-filter: blur(10px); /* Subtle blur effect */
+  background: rgba(255, 255, 255, 0.1);
+  /* Semi-transparent white for light mode */
+  color: var(--text);
+  backdrop-filter: blur(10px);
+  /* Subtle blur effect */
   transition: background-color 0.3s ease;
 }
 
 [data-theme="dark"] nav {
-  background: rgba(30, 41, 59, 0.1); /* Semi-transparent dark for dark mode */
+  background: rgba(30, 41, 59, 0.1);
+  /* Semi-transparent dark for dark mode */
 }
 
 /* NavLinks styles */
@@ -48,7 +34,7 @@ nav {
 /* MobileMenu styles */
 .mobile-menu {
   background: transparent;
-  /* transition: background-color 0.3s ease; */
+  transition: background-color 0.3s ease;
 }
 
 /* CTAButton styles */
@@ -89,4 +75,277 @@ nav {
 
 [data-theme="dark"] .theme-toggle {
   background: var(--accent);
+}
+
+/* Animated background for HomeSection */
+
+
+/* Ensure text is readable over the animated background */
+/* #home {
+  position: relative;
+  background: #000;
+} */
+
+section#home {
+  background: var(--background);
+  color: var(--text);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+section#home h2 {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+section#home p {
+  font-family: var(--font-family-base);
+  line-height: 1.6;
+}
+
+section#home .home-btn {
+  border: solid 0.14rem var(--text);
+  border-radius: var(--border-radius);
+  padding: var(--padding-btn);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section#home .home-btn:hover {
+  color: white;
+  background: var(--primary);
+  border: var(--primary) solid 0.14rem;
+}
+
+/* About section styles */
+section#about {
+  background: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section#about h2 {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+section#about p,
+section#about ul {
+  font-family: var(--font-family-base);
+  line-height: 1.6;
+}
+
+/* Custom list item styling for About section */
+section#about ul {
+  list-style: none;
+  /* Remove default bullets */
+  padding-left: 1rem;
+}
+
+section#about ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--primary);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+section#about ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+section#about ul li:hover {
+  color: var(--accent);
+  transform: translateX(0.5rem);
+}
+
+/* Projects section styles */
+section#projects {
+  background: var(--secondary);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section#projects h2 {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Project card styles */
+.project-card {
+  background: var(--background);
+  border-radius: var(--border-radius);
+  padding: var(--padding-base);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.project-card p {
+  font-family: var(--font-family-base);
+  line-height: 1.6;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.project-card a {
+  font-family: var(--font-family-base);
+  font-weight: 500;
+}
+
+
+/* Contact section styles */
+section#contact {
+  background: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section#contact h2 {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+section#contact p {
+  font-family: var(--font-family-base);
+  line-height: 1.6;
+}
+
+.contact-button {
+  background: var(--primary);
+  color: var(--secondary);
+  border-radius: var(--border-radius);
+  padding: var(--padding-btn);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+/* Footer styles */
+footer {
+  background: var(--primary);
+  color: var(--accent);
+  border-top: 1px solid var(--secondary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer p {
+  font-family: var(--font-family-base);
+  line-height: 1.6;
+}
+
+.footer-link {
+  color: var(--accent);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--text);
+  transform: scale(1.05);
+}
+
+/* Slide-up animation for footer and contact links */
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in animation for section heading and footer text */
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section#home h2 {
+    font-size: 2.5rem;
+  }
+
+  section#home p {
+    font-size: 1rem;
+  }
+
+  section#about h2 {
+    font-size: 2.5rem;
+  }
+
+  section#about p,
+  section#about ul {
+    font-size: 1rem;
+  }
+
+  section#about ul li {
+    padding-left: 1.2rem;
+  }
+
+  section#about ul li::before {
+    top: 0.4rem;
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+
+  section#projects h2 {
+    font-size: 2.5rem;
+  }
+
+  .project-card {
+    padding: 0.75rem;
+  }
+
+  section#contact h2 {
+    font-size: 2.5rem;
+  }
+
+  section#contact p {
+    font-size: 1rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
 }

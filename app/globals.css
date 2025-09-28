@@ -1,26 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f6fafd; /* Light gray for background */
+  --primary: #1a3d63; /* Deep magenta for primary elements */
+  --accent: #4a7fa7; /* Dark teal for highlights */
+  --text: #0a1931; /* Very dark teal for text */
+  --secondary: #b3cfe5; /* Light gray for secondary elements */
+  --font-family-base: 'Poppins', sans-serif;
+  --font-size-base: 16px;
+  --padding-base: 1rem;
+  --border-radius: 0.4rem; /* Consistent with Tailwind's rounded-md */
+  --padding-btn: 0.4rem 0.8rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Dark mode variables */
+[data-theme="dark"] {
+  --background: #0a1931; /* Very dark teal for background */
+  --primary: #4a7fa7; /* Deep magenta for primary elements */
+  --accent: #1a3d63; /* Dark teal for accents */
+  --text: #f6fafd; /* Light gray for text */
+  --secondary: #09213a; /* Dark teal for secondary elements */
 }

@@ -3,6 +3,7 @@ import HomeSection from './components/Home';
 import About from './components/About';
 import Projects from './components/Projexts';
 import Contact from './components/Contact';
+import Footer from "./components/Footer";
 
 import "./styles.css"
 
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 }
