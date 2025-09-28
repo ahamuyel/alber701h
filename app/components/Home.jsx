@@ -7,7 +7,7 @@ export default function HomeSection() {
   const phrases = [
     "Olá, eu sou Alberto Hamuyela",
     "Sou um estudante da 42",
-    "Apaixonado por tecnologia",
+    "Desenvolvedor Web",
     "Construo experiências digitais",
   ];
 

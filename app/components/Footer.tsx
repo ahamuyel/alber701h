@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-background border-t border-secondary py-10">
       <div className="container mx-auto px-4 text-center">
         <p className="text-base text-secondary mb-4 animate-fade-in">
-          Alberto Hamuyela &copy; 2025 | Desenvolvedor Web Apaixonado por Criar Experiências Digitais
+          Alberto Hamuyela &copy; 2025 | Desenvolvedor Web e excited por Criar Experiências Digitais
         </p>
         <div className="flex justify-center space-y-4 sm:space-y-0 sm:space-x-6 flex-col sm:flex-row">
           <Link
