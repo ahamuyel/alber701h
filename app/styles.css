@@ -23,7 +23,9 @@ nav {
 .nav-link {
   color: var(--text);
   font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
+  /* font-size: var(--font-size-base); */
+  font-size: 0.85rem;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
@@ -39,15 +41,18 @@ nav {
 
 /* CTAButton styles */
 .cta-button {
-  background: var(--primary);
-  color: #ffffff;
+  background: var(--text);
+  color: var(--background);
+  border: solid 0.14rem var(--text);
   border-radius: var(--border-radius);
   padding: var(--padding-btn);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cta-button:hover {
-  background: var(--accent);
+  background: transparent;
+  border: solid 0.14rem var(--text);
+  color: var(--text);
 }
 
 /* Theme toggle button */
@@ -96,14 +101,16 @@ section#home p {
   line-height: 1.6;
 }
 
-section#home .home-btn {
+section .btn {
+  color: var(--text);
   border: solid 0.14rem var(--text);
+  background: transparent;
   border-radius: var(--border-radius);
   padding: var(--padding-btn);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-section#home .home-btn:hover {
+section .btn:hover {
   color: white;
   background: var(--primary);
   border: var(--primary) solid 0.14rem;
@@ -144,6 +151,10 @@ section#about ul li:hover {
   color: var(--accent);
   transform: translateX(0.5rem);
 }
+
+/* section#about Link {
+
+} */
 
 /* stacks section styles */
 

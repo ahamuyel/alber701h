@@ -7,9 +7,11 @@ interface NavLinksProps {
 
 const NavLinks: React.FC<NavLinksProps> = ({ isMobile }) => {
   const links = [
-    { href: "#home", label: "Inicio" },
+    { href: "#home", label: "Início" },
     { href: "#about", label: "Sobre Mim" },
-    { href: "#projects", label: "Projetos" }, // Fixed typo: "projets" to "projects"
+    { href: "#stacks", label: "Stacks" },
+    { href: "#carreira", label: "Carreira" },
+    { href: "#projects", label: "Projetos" },
     { href: "#contact", label: "Blog" },
   ];
 

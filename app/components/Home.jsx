@@ -58,7 +58,7 @@ export default function HomeSection() {
         </p>
         <Link
           href="#projects"
-          className="home-btn inline-block px-6 py-3"
+          className="btn inline-block px-6 py-3"
         >
           Explore Meus Projetos
         </Link>
