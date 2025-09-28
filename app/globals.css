@@ -5,7 +5,7 @@
   --primary: #1a3d63; /* Deep magenta for primary elements */
   --accent: #4a7fa7; /* Dark teal for highlights */
   --text: #0a1931; /* Very dark teal for text */
-  --secondary: #b3cfe5; /* Light gray for secondary elements */
+  --secondary: #eff6fc; /* Light gray for secondary elements */
   --font-family-base: 'Poppins', sans-serif;
   --font-size-base: 16px;
   --padding-base: 1rem;
@@ -19,5 +19,5 @@
   --primary: #4a7fa7; /* Deep magenta for primary elements */
   --accent: #1a3d63; /* Dark teal for accents */
   --text: #f6fafd; /* Light gray for text */
-  --secondary: #09213a; /* Dark teal for secondary elements */
+  --secondary: #041220; /* Dark teal for secondary elements */
 }

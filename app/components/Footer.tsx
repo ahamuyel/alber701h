@@ -10,7 +10,7 @@ export default function Footer() {
         </p>
         <div className="flex justify-center space-y-4 sm:space-y-0 sm:space-x-6 flex-col sm:flex-row">
           <Link
-            href="mailto:seu.email@exemplo.com"
+            href="mailto:alber701hamuyela@gmail.com"
             className="footer-link text-text hover:text-accent transition-all duration-300 flex items-center justify-center space-x-2 animate-slide-up"
             style={{ animationDelay: '0.1s' }}
           >
@@ -18,7 +18,7 @@ export default function Footer() {
             <span>E-mail</span>
           </Link>
           <Link
-            href="https://github.com/seuusuario"
+            href="https://github.com/ahamuyel"
             className="footer-link text-text hover:text-accent transition-all duration-300 flex items-center justify-center space-x-2 animate-slide-up"
             style={{ animationDelay: '0.2s' }}
           >
@@ -26,7 +26,7 @@ export default function Footer() {
             <span>GitHub</span>
           </Link>
           <Link
-            href="https://linkedin.com/in/seuusuario"
+            href="https://linkedin.com/in/alberto-ih-173250382"
             className="footer-link text-text hover:text-accent transition-all duration-300 flex items-center justify-center space-x-2 animate-slide-up"
             style={{ animationDelay: '0.3s' }}
           >

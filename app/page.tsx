@@ -4,6 +4,8 @@ import About from './components/About';
 import Projects from './components/Projexts';
 import Contact from './components/Contact';
 import Footer from "./components/Footer";
+import Stacks from "./components/Stacks";
+import Carreira from "./components/Carreira";
 
 import "./styles.css"
 
@@ -13,6 +15,8 @@ export default function Home() {
       <Navbar />
       <HomeSection />
       <About />
+      <Stacks />
+      <Carreira />
       <Projects />
       <Contact />
       <Footer />

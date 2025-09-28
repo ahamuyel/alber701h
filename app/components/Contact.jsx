@@ -13,7 +13,7 @@ export default function Contact() {
         </p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
           <Link
-            href="mailto:seu.email@exemplo.com"
+            href="mailto:alber701hamuyela@gmail.com"
             className="contact-button bg-primary text-text px-6 py-3 rounded-full font-semibold hover:bg-accent transition-all duration-300 flex items-center justify-center space-x-2 animate-slide-up"
             style={{ animationDelay: '0.1s' }}
           >
@@ -21,7 +21,7 @@ export default function Contact() {
             <span>E-mail</span>
           </Link>
           <Link
-            href="https://github.com/seuusuario"
+            href="https://github.com/ahamuyel"
             className="contact-button bg-primary text-text px-6 py-3 rounded-full font-semibold hover:bg-accent transition-all duration-300 flex items-center justify-center space-x-2 animate-slide-up"
             style={{ animationDelay: '0.2s' }}
           >
@@ -29,7 +29,7 @@ export default function Contact() {
             <span>GitHub</span>
           </Link>
           <Link
-            href="https://linkedin.com/in/seuusuario"
+            href="https://linkedin.com/in/alberto-ih-173250382"
             className="contact-button bg-primary text-text px-6 py-3 rounded-full font-semibold hover:bg-accent transition-all duration-300 flex items-center justify-center space-x-2 animate-slide-up"
             style={{ animationDelay: '0.3s' }}
           >

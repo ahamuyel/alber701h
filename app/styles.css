@@ -79,13 +79,6 @@ nav {
 
 /* Animated background for HomeSection */
 
-
-/* Ensure text is readable over the animated background */
-/* #home {
-  position: relative;
-  background: #000;
-} */
-
 section#home {
   background: var(--background);
   color: var(--text);
@@ -104,7 +97,7 @@ section#home p {
 }
 
 section#home .home-btn {
-  border: solid 0.14rem white;
+  border: solid 0.14rem var(--text);
   border-radius: var(--border-radius);
   padding: var(--padding-btn);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -118,7 +111,7 @@ section#home .home-btn:hover {
 
 /* About section styles */
 section#about {
-  background: var(--background);
+  background: var(--secondary);
   color: var(--text);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -138,26 +131,13 @@ section#about ul {
 /* Custom list item styling for About section */
 section#about ul {
   list-style: none;
-  /* Remove default bullets */
   padding-left: 1rem;
 }
 
 section#about ul li {
   position: relative;
-  padding-left: 1.5rem;
   color: var(--primary);
   transition: color 0.3s ease, transform 0.3s ease;
-}
-
-section#about ul li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.5rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: var(--accent);
-  border-radius: 50%;
 }
 
 section#about ul li:hover {
@@ -165,9 +145,42 @@ section#about ul li:hover {
   transform: translateX(0.5rem);
 }
 
+/* stacks section styles */
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+section#stacks{
+  background-color: var(--background);
+}
+
+section#stacks h2{
+  color: var(--text);
+}
+
+
+section#stacks button {
+  background-color: #507b88e3;
+}
+
+section#stacks .card-stack{
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+/* Carreira section styles */
+section#carreira {
+  background: var(--secondary);
+  color: var(--text);
+}
+
+section#carreira .card{
+  background-color: var(--background);
+}
 /* Projects section styles */
 section#projects {
-  background: var(--secondary);
+  background: var(--background);
   color: var(--text);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -180,7 +193,7 @@ section#projects h2 {
 
 /* Project card styles */
 .project-card {
-  background: var(--background);
+  background: var(--secondary);
   border-radius: var(--border-radius);
   padding: var(--padding-base);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -212,7 +225,7 @@ section#projects h2 {
 
 /* Contact section styles */
 section#contact {
-  background: var(--background);
+  background: var(--secondary);
   color: var(--text);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -243,19 +256,22 @@ section#contact p {
 
 /* Footer styles */
 footer {
-  background: var(--primary);
-  color: var(--accent);
+  height: 12rem;
+  margin-bottom: 4rem;
+  background: var(--background);
+  color: var(--text);
   border-top: 1px solid var(--secondary);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 footer p {
+  font-size: 0.8rem;
   font-family: var(--font-family-base);
   line-height: 1.6;
 }
 
 .footer-link {
-  color: var(--accent);
+  color: var(--primary);
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   transition: color 0.3s ease, transform 0.3s ease;
@@ -329,6 +345,10 @@ footer p {
     height: 0.4rem;
   }
 
+  /* section#stacks button{
+    opacity: 0;
+  } */
+
   section#projects h2 {
     font-size: 2.5rem;
   }
@@ -348,4 +368,5 @@ footer p {
   footer p {
     font-size: 0.9rem;
   }
+
 }
