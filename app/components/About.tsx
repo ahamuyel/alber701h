@@ -27,7 +27,7 @@ export default function About() {
               href="https://drive.google.com/file/d/1DV5ms6ghHjwTKVRDM9jk53aSBFTJK_rN/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="cta-button inline-block px-6 py-3 my-10 bg-teal-600 text-white rounded hover:bg-coral-500 transition-colors"
+              className="cta-button inline-block px-6 py-3 my-10 text-white rounded transition-colors"
             >
               Ver o meu Currículo
             </a>
@@ -36,6 +36,26 @@ export default function About() {
           {/* Right: Lista */}
           <div className="md:w-1/2 text-gray-700">
             <ul className="list-none space-y-4">
+              <li className="flex items-start">
+                <svg
+                  className="w-6 h-6 text-coral-500 mr-2 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                  />
+                </svg>
+                <p>
+                  Desenvolvimento de aplicações web modernas com{" "}
+                  <span>React, Next.js e Tailwind CSS</span>.
+                </p>
+              </li>
               <li className="flex items-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -55,6 +75,28 @@ export default function About() {
                   Formação intensiva na <span>42 Luanda</span> com foco em{" "}
                   <span>Shell, C, C++</span>, POO, algoritmos e boas práticas de
                   engenharia de software.
+                </p>
+              </li>
+              <li className="flex items-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6 mr-2 flex-shrink-0"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z"
+                  />
+                </svg>
+                <p>
+                  Conhecimento em <span>redes de computadores</span> (CIDR,
+                  sub-redes, roteamento) e{" "}
+                  <span>administração de sistemas</span> com <span>Docker</span>{" "}
+                  e ambiente Linux.
                 </p>
               </li>
               <li className="flex items-start">

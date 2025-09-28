@@ -1,8 +1,8 @@
 @import "tailwindcss";
 :root {
   --background: #fdfdfd;   /* Branco puro */
-  --primary: #8d3636;      /* Preto elegante */
-  --accent: #b42042;       /* Vermelho vibrante */
+  --primary: #365c8d;      /* Preto elegante */
+  --accent: #0e3c79;       /* Vermelho vibrante */
   --text: #3b4355;         /* Cinza escuro */
   --secondary: #f5f3f3;    /* Cinza claro */
   --font-family-base: 'Poppins', sans-serif;
@@ -14,8 +14,8 @@
 
 [data-theme="dark"] {
   --background: #0e0e11;   /* Preto quase absoluto */
-  --primary: #8d3636;      /* Vermelho principal */
-  --accent: #cc123e;       /* Rosa avermelhado vibrante */
+  --primary: #a1bde4;      /* Vermelho principal */
+  --accent: #789ecf;       /* Rosa avermelhado vibrante */
   --text: #f5f5f7;         /* Cinza quase branco (não ofusca) */
   --secondary: #0e0c0c;    /* Cinza carvão para cards/blocos */
 }
