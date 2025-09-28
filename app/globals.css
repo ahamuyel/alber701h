@@ -2,10 +2,10 @@
 
 :root {
   --background: #f6fafd; /* Light gray for background */
-  --primary: #1a3d63; /* Deep magenta for primary elements */
-  --accent: #4a7fa7; /* Dark teal for highlights */
-  --text: #0a1931; /* Very dark teal for text */
-  --secondary: #eff6fc; /* Light gray for secondary elements */
+  --primary: #0b3563; /* Deep magenta for primary elements */
+  --accent: #012642; /* Dark teal for highlights */
+  --text: #041024; /* Very dark teal for text */
+  --secondary: #eef0f1; /* Light gray for secondary elements */
   --font-family-base: 'Poppins', sans-serif;
   --font-size-base: 16px;
   --padding-base: 1rem;
@@ -15,9 +15,10 @@
 
 /* Dark mode variables */
 [data-theme="dark"] {
-  --background: #0a1931; /* Very dark teal for background */
-  --primary: #4a7fa7; /* Deep magenta for primary elements */
-  --accent: #1a3d63; /* Dark teal for accents */
-  --text: #f6fafd; /* Light gray for text */
-  --secondary: #041220; /* Dark teal for secondary elements */
+  --background: #020203;   /* Quase preto absoluto */
+  --primary: #0b3563;      /* Azul profundo para botões/links */
+  --accent: #1e88e5;       /* Azul vivo para destaques */
+  --text: #f1f1f1;         /* Cinza quase branco (sem ser branco puro) */
+  --secondary: #0b0b16;    /* Preto suave para blocos/cards */
 }
+
