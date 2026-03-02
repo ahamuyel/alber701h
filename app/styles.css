@@ -180,14 +180,71 @@ section#stacks .card-stack{
   color: var(--primary);
 }
 
-/* Carreira section styles */
-section#carreira {
+/* Certificados section styles */
+section#certificados {
   background: var(--secondary);
   color: var(--text);
 }
 
-section#carreira .card{
+section#certificados h2 {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cert-subtitle {
+  color: var(--primary);
+}
+
+.cert-card {
   background-color: var(--background);
+  border: 1px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+}
+
+.cert-icon-wrapper {
+  color: var(--primary);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cert-card:hover .cert-icon-wrapper {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+.cert-title {
+  color: var(--text);
+}
+
+.cert-meta {
+  color: var(--primary);
+}
+
+.cert-date {
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.cert-link {
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.cert-link:hover {
+  color: var(--accent);
 }
 /* Projects section styles */
 section#projects {

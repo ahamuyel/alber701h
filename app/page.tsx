@@ -5,7 +5,7 @@ import Projects from './components/Projexts';
 import Contact from './components/Contact';
 import Footer from "./components/Footer";
 import Stacks from "./components/Stacks";
-import Carreira from "./components/Carreira";
+import Certificados from "./components/Certificados";
 
 import "./styles.css"
 
@@ -16,7 +16,7 @@ export default function Home() {
       <HomeSection />
       <About />
       <Stacks />
-      {/* <Carreira /> */}
+      <Certificados />
       <Projects />
       <Contact />
       <Footer />

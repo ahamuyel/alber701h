@@ -10,7 +10,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMobile }) => {
     { href: "#home", label: "Início" },
     { href: "#about", label: "Sobre Mim" },
     { href: "#stacks", label: "Stacks" },
-    { href: "#carreira", label: "Carreira" },
+    { href: "#certificados", label: "Certificados" },
     { href: "#projects", label: "Projetos" },
     { href: "#contact", label: "Blog" },
   ];
