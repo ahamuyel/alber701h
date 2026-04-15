@@ -1,20 +1,31 @@
 import type { Metadata } from "next";
-import { Inter, Fira_Code } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const firaCode = Fira_Code({
-  variable: "--font-fira-code",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Alberto Inacio Hamuyela - Portfolio",
-  description: "Created by Albert01H",
+  title: {
+    default: "Alberto Hamuyela | Full-Stack Developer",
+    template: "%s | Alberto Hamuyela",
+  },
+  description: "Full-stack developer passionate in building scalable, maintainable, and elegant web applications. Specialized in React, Node.js, and Go.",
+  keywords: ["full-stack developer", "web development", "React", "Node.js", "Go", "TypeScript"],
+  authors: [{ name: "Alberto Hamuyela" }],
+  openGraph: {
+    title: "Alberto Hamuyela | Full-Stack Developer",
+    description: "Full-stack developer passionate in building scalable, maintainable, and elegant web applications.",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
@@ -23,12 +34,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.variable} ${firaCode.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+    >
+      <body className="bg-[#111111] text-white">{children}</body>
     </html>
   );
 }
