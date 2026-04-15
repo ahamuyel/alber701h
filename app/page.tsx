@@ -10,16 +10,21 @@ import AboutSection from './components/AboutSection';
 import ExperienceSection from './components/ExperienceSection';
 import Footer from './components/Footer';
 import { projects, skills, workExperience, socialLinks } from './data';
-import { fadeIn } from './utils/animations';
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true);
 
+  // Initialize theme based on preference or system settings
   useEffect(() => {
-    // Check for saved theme preference or default to dark
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-      setIsDark(false);
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    const shouldUseDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+    
+    setIsDark(shouldUseDark);
+    if (shouldUseDark) {
+      document.documentElement.classList.add('dark');
+    } else {
       document.documentElement.classList.remove('dark');
     }
   }, []);
@@ -28,12 +33,12 @@ export default function Home() {
     const newIsDark = !isDark;
     setIsDark(newIsDark);
     
+    localStorage.setItem('theme', newIsDark ? 'dark' : 'light');
+    
     if (newIsDark) {
       document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
     }
   };
 
@@ -45,58 +50,70 @@ export default function Home() {
   };
 
   return (
-    <div className={`min-h-screen font-sans transition-colors duration-300 ${
-      isDark ? 'bg-[#111111] text-white' : 'bg-white text-[#111111]'
+    <div className={`min-h-screen font-sans transition-colors duration-500 ${
+      isDark ? 'bg-[#0a0a0a] text-white' : 'bg-[#fafafa] text-neutral-900'
     }`}>
       {/* Decorative circles */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div
-          className="absolute top-20 right-0 w-[600px] h-[600px] rounded-full border border-white/[0.03]"
+          className={`absolute top-20 right-0 w-[600px] h-[600px] rounded-full border transition-colors duration-500 ${isDark ? 'border-white/[0.03]' : 'border-neutral-200/60'}`}
           style={{ transform: 'translateX(40%)' }}
         />
         <div
-          className="absolute bottom-20 left-0 w-[400px] h-[400px] rounded-full border border-white/[0.03]"
+          className={`absolute bottom-20 left-0 w-[400px] h-[400px] rounded-full border transition-colors duration-500 ${isDark ? 'border-white/[0.03]' : 'border-neutral-200/60'}`}
           style={{ transform: 'translateX(-40%)' }}
         />
         <div
-          className="absolute top-1/2 left-1/2 w-[800px] h-[800px] rounded-full border border-white/[0.02]"
+          className={`absolute top-1/2 left-1/2 w-[800px] h-[800px] rounded-full border transition-colors duration-500 ${isDark ? 'border-white/[0.02]' : 'border-neutral-200/40'}`}
           style={{ transform: 'translate(-50%, -50%)' }}
         />
       </div>
 
-      <div className="relative z-10 px-4 md:px-8 py-8 md:py-12">
+      <div className="relative z-10 px-4 md:px-8 py-6 md:py-12">
         <motion.div
-          className="max-w-[1000px] mx-auto border border-white/15 rounded-[24px] p-6 md:p-10 relative overflow-hidden"
+          className={`max-w-[1000px] mx-auto border rounded-[24px] p-5 md:p-10 relative overflow-hidden transition-all duration-500 backdrop-blur-sm ${
+            isDark ? 'bg-neutral-900/40 border-white/10' : 'bg-white/80 border-neutral-200'
+          }`}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          {/* Background circle decoration */}
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full border border-white/[0.04] pointer-events-none" style={{ transform: 'translate(30%, -30%)' }} />
-          <div className="absolute bottom-40 right-20 w-[400px] h-[400px] rounded-full border border-white/[0.03] pointer-events-none" style={{ transform: 'translate(20%, 0)' }} />
+          {/* Background circle decoration inside card */}
+          <div className={`absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-full border pointer-events-none transition-colors duration-500 ${isDark ? 'border-white/[0.04]' : 'border-neutral-200/50'}`} style={{ transform: 'translate(30%, -30%)' }} />
+          <div className={`absolute bottom-20 right-10 md:bottom-40 md:right-20 w-[200px] md:w-[400px] h-[200px] md:h-[400px] rounded-full border pointer-events-none transition-colors duration-500 ${isDark ? 'border-white/[0.03]' : 'border-neutral-200/30'}`} style={{ transform: 'translate(20%, 0)' }} />
 
-          {/* Header */}
-          <Header onThemeToggle={handleThemeToggle} isDark={isDark} />
+          <div className="relative z-20">
+            {/* Header */}
+            <Header onThemeToggle={handleThemeToggle} isDark={isDark} />
 
-          {/* Hero Section */}
-          <Hero onProjectsClick={handleProjectsClick} />
+            {/* Hero Section */}
+            <Hero onProjectsClick={handleProjectsClick} isDark={isDark} />
 
-          {/* Social Links */}
-          <SocialLinks links={socialLinks} />
+            {/* Social Links */}
+            <SocialLinks links={socialLinks} isDark={isDark} />
 
-          {/* Projects Carousel */}
-          <div id="projects" className="scroll-mt-24">
-            <ProjectsCarousel projects={projects} />
+            {/* Projects Carousel */}
+            <div id="projects" className="scroll-mt-24 mt-8 md:mt-12">
+              <ProjectsCarousel projects={projects} isDark={isDark} />
+            </div>
+            
+            {/* About & Skills Section */}
+            <div className="mt-8 md:mt-12">
+              <AboutSection skills={skills} isDark={isDark} />
+            </div>
+            
+            {/* Work Experience Section*/}
+            <div className="mt-8 md:mt-12">
+              <ExperienceSection experiences={workExperience} isDark={isDark} />
+            </div> 
+            
+
+            {/* Footer / Contact */}
+            <div className="mt-8 md:mt-12">
+              <Footer isDark={isDark} />
+            </div>
+            
           </div>
-
-          {/* About & Skills Section */}
-          <AboutSection skills={skills} />
-
-          {/* Work Experience Section */}
-          <ExperienceSection experiences={workExperience} />
-
-          {/* Footer / Contact */}
-          <Footer />
         </motion.div>
       </div>
     </div>
