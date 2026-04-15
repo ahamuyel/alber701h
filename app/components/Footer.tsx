@@ -38,7 +38,7 @@ export default function Footer({ isDark }: FooterProps) {
 
         <div className="flex flex-wrap items-center justify-center gap-3">
           {[
-            { href: 'mailto:alberto@example.com', icon: Mail, label: 'Email' },
+            { href: 'mailto:alber701hamuyela.com', icon: Mail, label: 'Email' },
             { href: 'https://github.com/alber701h', icon: FaGithub, label: 'GitHub', external: true },
             { href: 'https://linkedin.com/in/alberto-hamuyela', icon: FaLinkedin, label: 'LinkedIn', external: true },
             { href: 'https://t.me/alber701h', icon: Send, label: 'Telegram', external: true },
