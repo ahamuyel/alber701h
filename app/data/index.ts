@@ -3,83 +3,55 @@ import {
   FaGithub, 
   FaLinkedin, 
   FaInstagram, 
-  FaFacebook, 
-  FaTelegram 
 } from 'react-icons/fa';
 
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'kafka + golang microservices',
-    description: 'A micro-service architecture using Kafka, Golang and Docker for scalable message handling.',
-    image: '/project1.jpg',
-    tags: ['Golang', 'Kafka', 'Docker'],
-    githubUrl: 'https://github.com/alber701h',
+    title: 'Cur10usX',
+    description: 'A student platform that turns academic data into portfolios, growth, and career opportunities.',
+    image: '/cur10usx.png',
+    tags: ['Next.js · Node.js · PostgreSQL · Prisma · Docker'],
+    liveUrl: 'https://cur10us-sm.vercel.app',
+    githubUrl: 'https://github.com/ahamuyel/cur10us-sm',
   },
   {
     id: 2,
-    title: 'REST APIs with Node.js',
-    description: 'Scalable REST APIs using Node.js, Express, and MongoDB with authentication and rate limiting.',
-    image: '/project2.jpg',
-    tags: ['Node.js', 'Express', 'MongoDB'],
+    title: 'Fullstack Social Media App',
+    description: 'A full stack social media app with authentication, using React, Supabase, PostgressSQL, TailwindCSS and TypeScript.',
+    image: '/project1.jpg',
+    tags: ['TypeScript', 'Supabase', 'PostgresSQL'],
     githubUrl: 'https://github.com/alber701h',
   },
   {
     id: 3,
-    title: 'React Performance Dashboard',
-    description: 'Performance monitoring dashboard with real-time metrics, profiling and optimization suggestions.',
-    image: '/project3.jpg',
-    tags: ['React', 'TypeScript', 'D3.js'],
-    liveUrl: 'https://react-dashboard.demo',
-    githubUrl: 'https://github.com/alber701h',
+    title: 'REST APIs with Node.js',
+    description: 'Scalable REST APIs using Node.js, Express, and MongoDB with authentication and rate limiting.',
+    image: '/project2.jpg',
+    tags: ['Node.js', 'Express', 'MongoDB'],
+    githubUrl: 'https://github.com/ahamuyel/ready-API',
   },
 ];
 
 export const skills: Skill[] = [
-  { category: 'Front-end', skills: 'TypeScript / React / Vue / Vuex / Redux Toolkit / NextJs / Nuxt / Jest / GraphQL / React Native / Puppeteer' },
-  { category: 'Styles', skills: 'SCSS / SASS / PostCSS / Ant.d / MUI / Material UI / Tailwind CSS' },
-  { category: 'Back-end', skills: 'GoLang / Gin / GORM / PostgreSQL / MySQL / MongoDB / gRPC / Redis / Kafka / Node / Nest / TypeORM' },
-  { category: 'DevOps', skills: 'Nginx / Brotli / Docker / (CI/CD) / k8s / Bash' },
+  { category: 'Front-end', skills: 'TypeScript / React / Vue / NextJs / GraphQL ' },
+  { category: 'Styles', skills: 'SCSS / PostCSS /  Material UI / Tailwind CSS' },
+  { category: 'Back-end', skills: 'C++ / C  / PostgreSQL / MySQL / MongoDB / Node / PostgresSQL / Express.js' },
+  { category: 'DevOps', skills: 'Nginx / Docker / (CI/CD) / Bash' },
 ];
 
 export const workExperience: WorkExperience[] = [
   {
-    period: '2022 - Present',
-    company: 'ITHUB',
-    role: 'Frontend Developer',
-    tech: 'React & Vue',
-    startDate: '2022-01',
-  },
-  {
-    period: '2021 - 2022',
-    company: 'VK Development Lab',
-    role: 'Frontend Developer',
-    tech: 'React',
-    startDate: '2021-01',
-    endDate: '2022-01',
-  },
-  {
-    period: '2020 - 2021',
-    company: 'SN Inc.',
-    role: 'Fullstack Developer',
-    tech: 'JavaScript & Python',
-    startDate: '2020-01',
-    endDate: '2021-01',
-  },
-  {
-    period: '2018 - 2020',
-    company: 'Business Up',
-    role: 'Fullstack Developer',
-    tech: 'JavaScript & Python',
-    startDate: '2018-01',
-    endDate: '2020-01',
+    period: '2024 - Present',
+    company: '42 School',
+    role: 'Student',
+    tech: 'Software Development',
+    startDate: '2024-05',
   },
 ];
 
 export const socialLinks: SocialLink[] = [
-  { icon: FaGithub, label: 'GitHub', url: 'https://github.com/alber701h' },
-  { icon: FaLinkedin, label: 'LinkedIn', url: 'https://linkedin.com/in/alberto-hamuyela' },
-  { icon: FaTelegram, label: 'Telegram', url: 'https://t.me/alber701h' },
-  { icon: FaFacebook, label: 'Facebook', url: 'https://facebook.com/alber701h' },
+  { icon: FaGithub, label: 'GitHub', url: 'https://github.com/ahamuyel' },
+  { icon: FaLinkedin, label: 'LinkedIn', url: 'https://linkedin.com/in/alberto-ih-173250382' },
   { icon: FaInstagram, label: 'Instagram', url: 'https://instagram.com/alber701h' },
 ];
