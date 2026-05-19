@@ -2,26 +2,25 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, FileDown, FileText, Languages } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
+import { useLanguage } from '../context/LanguageContext';
+import { cvUrl, resumeUrl } from '../data';
 
-interface HeaderProps {
-  onThemeToggle: () => void;
-  isDark: boolean;
-}
-
-const navItems = [
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Contact', href: '#contact' },
-];
-
-export default function Header({ onThemeToggle, isDark }: HeaderProps) {
+export default function Header() {
+  const { isDark, toggleTheme } = useTheme();
+  const { t, lang, toggleLanguage } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Close menu when clicking outside
+  const navItems = [
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.projects, href: '#projects' },
+    { label: t.nav.skills, href: '#skills' },
+    { label: t.nav.experience, href: '#experience' },
+    { label: t.nav.contact, href: '#contact' },
+  ];
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -38,7 +37,6 @@ export default function Header({ onThemeToggle, isDark }: HeaderProps) {
     };
   }, [isMobileMenuOpen]);
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -58,7 +56,6 @@ export default function Header({ onThemeToggle, isDark }: HeaderProps) {
     }
   };
 
-  // Define theme-dependent styles
   const styles = {
     text: {
       primary: isDark ? 'text-white/90' : 'text-neutral-900',
@@ -72,7 +69,6 @@ export default function Header({ onThemeToggle, isDark }: HeaderProps) {
     btn: {
       base: isDark ? 'hover:bg-white/10 text-white/70 active:bg-white/20' : 'hover:bg-black/10 text-neutral-600 active:bg-black/20',
     },
-    divider: isDark ? 'bg-white/10' : 'bg-neutral-200',
   };
 
   return (
@@ -83,14 +79,12 @@ export default function Header({ onThemeToggle, isDark }: HeaderProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        {/* Logo / Name */}
         <div className="text-sm font-mono tracking-wide select-none cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <span className={styles.text.primary}>Alberto</span>
           <br />
           <span className={styles.text.secondary}>Hamuyela</span>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navItems.map((item) => (
             <a
@@ -107,13 +101,47 @@ export default function Header({ onThemeToggle, isDark }: HeaderProps) {
           ))}
         </nav>
 
-        {/* Controls */}
         <div className="flex items-center gap-2">
+          {/* Language Toggle */}
+          <button
+            onClick={toggleLanguage}
+            className={`p-2 rounded-full transition-all duration-300 text-xs font-mono font-semibold ${styles.btn.base}`}
+            aria-label={t.language.switchTo}
+            title={t.language.switchTo}
+          >
+            <Languages className="w-4 h-4 hidden sm:block" />
+            <span className="sm:hidden">{lang === 'en' ? 'PT' : 'EN'}</span>
+            <span className="hidden sm:block text-xs ml-0">{lang === 'en' ? 'PT' : 'EN'}</span>
+          </button>
+
+          {/* Resume View */}
+          <a
+            href={resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`p-2 rounded-full transition-all duration-300 ${styles.btn.base}`}
+            aria-label={t.header.viewResume}
+            title={t.header.viewResume}
+          >
+            <FileText className="w-4 h-4" />
+          </a>
+
+          {/* CV Download */}
+          <a
+            href={cvUrl}
+            download
+            className={`p-2 rounded-full transition-all duration-300 ${styles.btn.base}`}
+            aria-label={t.header.downloadCV}
+            title={t.header.downloadCV}
+          >
+            <FileDown className="w-4 h-4" />
+          </a>
+
           {/* Theme Toggle */}
           <button
-            onClick={onThemeToggle}
+            onClick={toggleTheme}
             className={`p-2 rounded-full transition-all duration-300 ${styles.btn.base}`}
-            aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            aria-label={isDark ? t.header.switchToLight : t.header.switchToDark}
           >
             <motion.div
               initial={false}
@@ -124,11 +152,10 @@ export default function Header({ onThemeToggle, isDark }: HeaderProps) {
             </motion.div>
           </button>
 
-          {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden p-2 rounded-full transition-all duration-300 ${styles.btn.base}`}
-            aria-label="Toggle mobile menu"
+            aria-label={t.header.toggleMenu}
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -146,11 +173,9 @@ export default function Header({ onThemeToggle, isDark }: HeaderProps) {
         </div>
       </motion.header>
 
-      {/* Mobile Menu Overlay - Fixed position to avoid overflow issues */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               className={`fixed inset-0 z-40 ${isDark ? 'bg-black/60' : 'bg-black/20'} backdrop-blur-sm`}
               initial={{ opacity: 0 }}
@@ -159,8 +184,6 @@ export default function Header({ onThemeToggle, isDark }: HeaderProps) {
               transition={{ duration: 0.3 }}
               onClick={() => setIsMobileMenuOpen(false)}
             />
-            
-            {/* Menu Panel */}
             <motion.div
               ref={menuRef}
               className={`fixed top-4 left-4 right-4 md:left-auto md:right-8 md:w-80 md:top-20 z-50 backdrop-blur-xl border rounded-2xl shadow-2xl ${styles.bg.mobileMenu}`}

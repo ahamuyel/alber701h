@@ -1,0 +1,75 @@
+const pt = {
+  nav: {
+    about: 'Sobre',
+    projects: 'Projetos',
+    skills: 'Habilidades',
+    experience: 'Experiência',
+    contact: 'Contato',
+  },
+  header: {
+    viewResume: 'Ver Currículo',
+    downloadCV: 'Baixar CV',
+    switchToLight: 'Alternar para modo claro',
+    switchToDark: 'Alternar para modo escuro',
+    toggleMenu: 'Abrir menu',
+  },
+  hero: {
+    typewriter: ['Olá, sou Alberto IH', 'Estudante da 42', 'Desenvolvedor Web', 'DevOps', 'Fundador da Cur10usX'],
+    available: 'Disponível para oportunidades',
+    viewProjects: 'Ver Projetos',
+    resume: 'Currículo',
+    tagline: 'Construo sistemas full-stack do zero — da base de dados ao deployment. Focado em EdTech e produtos web escaláveis.',
+    developer: 'Desenvolvedor',
+  },
+  about: {
+    heading: '... /Sobre mim ...',
+    body: 'Sou um desenvolvedor full-stack autodidata e estudante de engenharia de software na 42 Luanda, onde o aprendizado acontece através da resolução de problemas e colaboração entre pares, em vez de aulas tradicionais.\n\nTenho interesse em entender como sistemas funcionam como um todo — desde a interface até a infraestrutura. Gosto de pensar em arquitetura, experiência do utilizador e nas decisões técnicas por trás dos produtos que construo.\n\nAtualmente estou a trabalhar na Cur10usX, uma plataforma SaaS EdTech, que estou a desenvolver de forma independente. É um projeto em evolução, onde tenho vindo a aprender bastante sobre design de sistemas, backend, bases de dados e deploy.\n\nO que mais me motiva é a oportunidade de aprender enquanto construo e de transformar ideias em algo funcional e útil.',
+    techStack: 'Competências',
+    techStackSub: 'Ferramentas, tecnologias & mais',
+  },
+  experience: {
+    subtitle: 'Algumas das minhas {highlight} e ferramentas que uso',
+    work: 'Trabalho',
+    totalLabel: 'Experiência total de trabalho',
+  },
+  projects: {
+    title: 'Projetos',
+    subtitle: 'Coisas que construí',
+    gridView: 'Visualização em grade',
+    carouselView: 'Visualização em carrossel',
+    grid: 'Grade',
+    carousel: 'Carrossel',
+    viewDetails: 'Ver Detalhes',
+    liveDemo: 'Demo Online',
+    code: 'Código',
+    previous: 'Projeto anterior',
+    next: 'Próximo projeto',
+    goTo: 'Ir para projeto {n}',
+  },
+  footer: {
+    heading: 'Vamos trabalhar juntos',
+    subtitle: 'Sempre aberto a novas oportunidades e projetos interessantes',
+    emailPlaceholder: 'Seu email',
+    messagePlaceholder: 'Sua mensagem',
+    send: 'Enviar Mensagem',
+    sent: 'Enviado!',
+    email: 'Email',
+    copyright: '© {year} Alberto Hamuyela. Todos os direitos reservados.',
+  },
+  notFound: {
+    title: 'Página não encontrada',
+    description: 'A página que você procura não existe ou foi movida.',
+    backHome: 'Voltar ao início',
+  },
+  error: {
+    title: 'Algo deu errado',
+    defaultMessage: 'Ocorreu um erro inesperado.',
+    errorId: 'ID do erro: {digest}',
+    retry: 'Tentar novamente',
+  },
+  language: {
+    switchTo: 'Mudar para Inglês',
+  },
+} as const;
+
+export default pt;

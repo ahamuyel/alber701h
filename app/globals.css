@@ -9,6 +9,8 @@
     --text-primary: rgba(0, 0, 0, 0.9);
     --text-secondary: rgba(0, 0, 0, 0.6);
     --text-muted: rgba(0, 0, 0, 0.4);
+    --accent: #a78bfa;
+    --accent-hover: #8b5cf6;
   }
 
   .dark {
@@ -19,6 +21,8 @@
     --text-primary: rgba(255, 255, 255, 0.9);
     --text-secondary: rgba(255, 255, 255, 0.6);
     --text-muted: rgba(255, 255, 255, 0.4);
+    --accent: #a78bfa;
+    --accent-hover: #c4b5fd;
   }
 }
 
@@ -42,20 +46,43 @@
   .border-theme {
     border-color: var(--card-border);
   }
+
+  .text-accent {
+    color: var(--accent);
+  }
+
+  .hover\:text-accent:hover {
+    color: var(--accent-hover);
+  }
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 ::selection {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(167, 139, 250, 0.3);
   color: #ffffff;
 }
 
-.dark ::selection {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+::-webkit-scrollbar {
+  width: 6px;
 }
 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
 
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

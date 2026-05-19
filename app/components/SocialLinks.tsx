@@ -1,17 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
 import type { SocialLink } from '../types';
 
 interface SocialLinksProps {
   links: SocialLink[];
-  isDark: boolean;
 }
 
-export default function SocialLinks({ links, isDark }: SocialLinksProps) {
+export default function SocialLinks({ links }: SocialLinksProps) {
+  const { isDark } = useTheme();
+
   return (
     <motion.div
-      className={`flex flex-wrap items-center gap-3 mb-12 md:mb-16 relative z-10 transition-colors duration-300`}
+      className="flex flex-wrap items-center gap-3 mb-12 md:mb-16 relative z-10 transition-colors duration-300"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.8, duration: 0.5 }}

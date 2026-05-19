@@ -1,0 +1,20 @@
+Alberto Hamuyela - Curriculum Vitae
+====================================
+
+Full-Stack Developer
+
+Contact: alber701hamuyela.com
+GitHub: https://github.com/ahamuyel
+LinkedIn: https://linkedin.com/in/alberto-ih-173250382
+
+Skills:
+- Front-end: TypeScript, React, Vue, Next.js, GraphQL
+- Styles: SCSS, PostCSS, Material UI, Tailwind CSS
+- Back-end: C++, C, PostgreSQL, MySQL, MongoDB, Node.js, Express.js
+- DevOps: Nginx, Docker, CI/CD, Bash
+
+Experience:
+- 42 School (2024 - Present): Student, Software Development
+
+Education:
+- 42 School: Common Core (2024)

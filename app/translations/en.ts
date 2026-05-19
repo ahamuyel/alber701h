@@ -1,0 +1,75 @@
+const en = {
+  nav: {
+    about: 'About',
+    projects: 'Projects',
+    skills: 'Skills',
+    experience: 'Experience',
+    contact: 'Contact',
+  },
+  header: {
+    viewResume: 'View Resume',
+    downloadCV: 'Download CV',
+    switchToLight: 'Switch to light mode',
+    switchToDark: 'Switch to dark mode',
+    toggleMenu: 'Toggle mobile menu',
+  },
+  hero: {
+    typewriter: ["Hi, I'm Alberto IH", 'A 42 Student', 'Web Developer', 'DevOps', "Cur10usX's founder"],
+    available: 'Open to opportunities',
+    viewProjects: 'View Projects',
+    resume: 'Resume',
+    tagline: 'I build full-stack systems from the ground up — from database design to deployment. Currently focused on EdTech and scalable web products.',
+    developer: 'Developer',
+  },
+  about: {
+    heading: '... /About me ...',
+    body: "I'm a self-taught full-stack developer and software engineering student at 42 Luanda, where learning happens through problem-solving and peer collaboration, rather than traditional lectures.\n\nI'm interested in understanding how systems work as a whole — from the interface to the infrastructure. I enjoy thinking about architecture, user experience, and the technical decisions behind the products I build.\n\nCurrently working on Cur10usX, an EdTech SaaS platform that I'm developing independently. It's a work in progress, and I've been learning a lot about system design, backend, databases, and deployment along the way.\n\nWhat motivates me most is the opportunity to learn while building and to turn ideas into something functional and useful.",
+    techStack: 'Tech Stack',
+    techStackSub: 'Tools, technologies & more',
+  },
+  experience: {
+    subtitle: 'Some of my {highlight} and tools I work with',
+    work: 'Work',
+    totalLabel: 'Total work experience',
+  },
+  projects: {
+    title: 'Projects',
+    subtitle: "Things I've built",
+    gridView: 'Grid view',
+    carouselView: 'Carousel view',
+    grid: 'Grid',
+    carousel: 'Carousel',
+    viewDetails: 'View Details',
+    liveDemo: 'Live Demo',
+    code: 'Code',
+    previous: 'Previous project',
+    next: 'Next project',
+    goTo: 'Go to project {n}',
+  },
+  footer: {
+    heading: "Let's work together",
+    subtitle: 'Always open to new opportunities and interesting projects',
+    emailPlaceholder: 'Your email',
+    messagePlaceholder: 'Your message',
+    send: 'Send Message',
+    sent: 'Sent!',
+    email: 'Email',
+    copyright: '© {year} Alberto Hamuyela. All rights reserved.',
+  },
+  notFound: {
+    title: 'Page not found',
+    description: "The page you're looking for doesn't exist or has been moved.",
+    backHome: 'Back to home',
+  },
+  error: {
+    title: 'Something went wrong',
+    defaultMessage: 'An unexpected error occurred.',
+    errorId: 'Error ID: {digest}',
+    retry: 'Try again',
+  },
+  language: {
+    switchTo: 'Switch to Portuguese',
+  },
+} as const;
+
+export default en;
