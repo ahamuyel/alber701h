@@ -101,9 +101,8 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 flex-shrink-0">
           {[
             { href: 'mailto:alber701hamuyela@gmail.com', icon: Mail, label: t.footer.email },
-            { href: 'https://github.com/alber701h', icon: FaGithub, label: 'GitHub', external: true },
+            { href: 'https://github.com/ahamuyel', icon: FaGithub, label: 'GitHub', external: true },
             { href: 'https://www.linkedin.com/in/alber701h', icon: FaLinkedin, label: 'LinkedIn', external: true },
-            { href: 'https://t.me/alber701h', icon: Send, label: 'Telegram', external: true },
           ].map((link) => (
             <a
               key={link.label}

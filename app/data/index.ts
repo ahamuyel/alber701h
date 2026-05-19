@@ -179,7 +179,7 @@ export const workExperience: WorkExperience[] = [
     tech: 'Software Development',
     startDate: '2024-05',
     url: 'https://42.fr',
-    description: '42 is a global engineering school with no teachers and no traditional classes — learning happens entirely through projects and peer collaboration. Ranked among the top programming schools worldwide, present in 50+ countries.',
+    description: '42 is a global engineering school with no teachers and no traditional classes — learning happens entirely through projects and peer collaboration. Ranked among the top programming schools worldwide, with 50+ campuses in 30+ countries.',
     highlights: [
       'Completing the Common Core covering C, algorithms, OS, memory management, networking, and web development',
       'Built projects spanning low-level programming, infrastructure, and full-stack web',
