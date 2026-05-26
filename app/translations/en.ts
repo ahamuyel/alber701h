@@ -6,6 +6,7 @@ const en = {
     experience: 'Experience',
     contact: 'Contact',
   },
+
   header: {
     viewResume: 'View Resume',
     downloadCV: 'Download CV',
@@ -13,25 +14,50 @@ const en = {
     switchToDark: 'Switch to dark mode',
     toggleMenu: 'Toggle mobile menu',
   },
+
   hero: {
-    typewriter: ["Hi, I'm Alberto IH", 'A 42 Student', 'Web Developer', 'DevOps', "Cur10usX's founder"],
+    typewriter: [
+      "Hi, I'm Alberto Hamuyela",
+      'Software Engineering Student',
+      'Full-Stack Developer',
+      'Product Builder',
+      'Founder of Cur10usX',
+    ],
+
     available: 'Open to opportunities',
+
     viewProjects: 'View Projects',
+
     resume: 'Resume',
-    tagline: 'I build full-stack systems from the ground up — from database design to deployment. Currently focused on EdTech and scalable web products.',
+
+    tagline:
+      'I build full-stack products from end to end — from interface design to backend architecture, databases, and deployment. Currently building Cur10usX, an EdTech platform focused on improving education through technology.',
+
     developer: 'Developer',
   },
+
   about: {
     heading: '... /About me ...',
-    body: "I'm a self-taught full-stack developer and software engineering student at 42 Luanda, where learning happens through problem-solving and peer collaboration, rather than traditional lectures.\n\nI'm interested in understanding how systems work as a whole — from the interface to the infrastructure. I enjoy thinking about architecture, user experience, and the technical decisions behind the products I build.\n\nCurrently working on Cur10usX, an EdTech SaaS platform that I'm developing independently. It's a work in progress, and I've been learning a lot about system design, backend, databases, and deployment along the way.\n\nWhat motivates me most is the opportunity to learn while building and to turn ideas into something functional and useful.",
+
+    body: `I'm a self-taught full-stack developer and software engineering student at 42 Luanda, where learning happens through problem-solving, collaboration, and building real systems.
+
+I’m interested in understanding software as a whole — not just isolated pieces. I enjoy working across the stack, from frontend interfaces to backend systems, infrastructure, and product architecture.
+
+Currently, I’m building Cur10usX, an EdTech SaaS platform designed for Angola, focused on school management, academic performance, and connecting education with opportunity.
+
+What motivates me most is building useful products, solving real problems, and continuously learning through execution.`,
+
     techStack: 'Tech Stack',
-    techStackSub: 'Tools, technologies & more',
+
+    techStackSub: 'Tools, technologies & systems I work with',
   },
+
   experience: {
-    subtitle: 'Some of my {highlight} and tools I work with',
+    subtitle: 'Some of my {highlight} and technologies I work with',
     work: 'Work',
     totalLabel: 'Total work experience',
   },
+
   projects: {
     title: 'Projects',
     subtitle: "Things I've built",
@@ -46,27 +72,41 @@ const en = {
     next: 'Next project',
     goTo: 'Go to project {n}',
   },
+
   footer: {
     heading: "Let's work together",
-    subtitle: 'Always open to new opportunities and interesting projects',
+
+    subtitle:
+      'Always open to internships, collaborations, and ambitious projects.',
+
     emailPlaceholder: 'Your email',
+
     messagePlaceholder: 'Your message',
+
     send: 'Send Message',
+
     sent: 'Sent!',
+
     email: 'Email',
-    copyright: '© {year} Alberto Hamuyela. All rights reserved.',
+
+    copyright:
+      '© {year} Alberto Hamuyela. All rights reserved.',
   },
+
   notFound: {
     title: 'Page not found',
-    description: "The page you're looking for doesn't exist or has been moved.",
+    description:
+      "The page you're looking for doesn't exist or has been moved.",
     backHome: 'Back to home',
   },
+
   error: {
     title: 'Something went wrong',
     defaultMessage: 'An unexpected error occurred.',
     errorId: 'Error ID: {digest}',
     retry: 'Try again',
   },
+
   language: {
     switchTo: 'Switch to Portuguese',
   },

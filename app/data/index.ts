@@ -2,7 +2,7 @@ import type { Project, Skill, WorkExperience, Certification, SocialLink } from '
 import { Monitor, Brain, Rocket, Palette, Shield, Puzzle } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
-export const cvUrl = '/cv.txt';
+export const cvUrl = '/resume.pdf';
 export const resumeUrl = '/resume.pdf';
 
 export const projects: Project[] = [
@@ -11,7 +11,7 @@ export const projects: Project[] = [
     title: 'Cur10usX',
     description: 'A student platform that turns academic data into portfolios, growth, and career opportunities.',
     longDescription: 'Cur10usX is a comprehensive student platform designed to bridge the gap between academic performance and career development. It automatically transforms grades, projects, and achievements into professional portfolios, tracks growth metrics, and connects students with relevant opportunities.',
-    image: '/api/preview?url=https://cur10us-sm.vercel.app',
+    image: '/api/preview?url=https://cur10usx.vercel.app',
     tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Prisma', 'Docker'],
     features: [
       'Automated portfolio generation from academic data',

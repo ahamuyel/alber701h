@@ -11,21 +11,28 @@ const pt = {
     downloadCV: 'Baixar CV',
     switchToLight: 'Alternar para modo claro',
     switchToDark: 'Alternar para modo escuro',
-    toggleMenu: 'Abrir menu',
+    toggleMenu: 'Alternar menu mobile',
   },
   hero: {
-    typewriter: ['Olá, sou Alberto IH', 'Estudante da 42', 'Desenvolvedor Web', 'DevOps', 'Fundador da Cur10usX'],
+    typewriter: [
+      'Olá, sou Alberto Hamuyela',
+      'Estudante de Engenharia de Software',
+      'Desenvolvedor Full-Stack',
+      'Product Builder',
+      'Fundador da Cur10usX',
+    ],
     available: 'Disponível para oportunidades',
     viewProjects: 'Ver Projetos',
     resume: 'Currículo',
-    tagline: 'Construo sistemas full-stack do zero — da base de dados ao deployment. Focado em EdTech e produtos web escaláveis.',
+    tagline:
+      'Crio produtos full-stack do início ao fim — desde o design da interface até a arquitetura do backend, bancos de dados e deployment. Atualmente estou a construir a Cur10usX, uma plataforma EdTech focada em melhorar a educação através da tecnologia.',
     developer: 'Desenvolvedor',
   },
   about: {
     heading: '... /Sobre mim ...',
-    body: 'Sou um desenvolvedor full-stack autodidata e estudante de engenharia de software na 42 Luanda, onde o aprendizado acontece através da resolução de problemas e colaboração entre pares, em vez de aulas tradicionais.\n\nTenho interesse em entender como sistemas funcionam como um todo — desde a interface até a infraestrutura. Gosto de pensar em arquitetura, experiência do utilizador e nas decisões técnicas por trás dos produtos que construo.\n\nAtualmente estou a trabalhar na Cur10usX, uma plataforma SaaS EdTech, que estou a desenvolver de forma independente. É um projeto em evolução, onde tenho vindo a aprender bastante sobre design de sistemas, backend, bases de dados e deploy.\n\nO que mais me motiva é a oportunidade de aprender enquanto construo e de transformar ideias em algo funcional e útil.',
-    techStack: 'Competências',
-    techStackSub: 'Ferramentas, tecnologias & mais',
+    body: 'Sou um desenvolvedor full-stack autodidata e estudante de engenharia de software na 42 Luanda, onde o aprendizado acontece através da resolução de problemas, colaboração e construção de sistemas reais.\n\nTenho interesse em entender o software como um todo — não apenas peças isoladas. Gosto de trabalhar em toda a stack, desde interfaces frontend até sistemas backend, infraestrutura e arquitetura de produto.\n\nAtualmente, estou a construir a Cur10usX, uma plataforma SaaS EdTech projetada para Angola, focada em gestão escolar, desempenho académico e conectar a educação com oportunidades.\n\nO que mais me motiva é construir produtos úteis, resolver problemas reais e aprender continuamente através da execução.',
+    techStack: 'Stack de Tecnologias',
+    techStackSub: 'Ferramentas, tecnologias e sistemas com que trabalho',
   },
   experience: {
     subtitle: 'Algumas das minhas {highlight} e ferramentas que uso',
@@ -48,7 +55,8 @@ const pt = {
   },
   footer: {
     heading: 'Vamos trabalhar juntos',
-    subtitle: 'Sempre aberto a novas oportunidades e projetos interessantes',
+    subtitle:
+      'Sempre aberto a estágios, colaborações e projetos ambiciosos.',
     emailPlaceholder: 'Seu email',
     messagePlaceholder: 'Sua mensagem',
     send: 'Enviar Mensagem',
