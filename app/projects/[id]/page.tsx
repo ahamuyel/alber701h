@@ -6,13 +6,16 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { FaGithub as FaGithubIcon } from 'react-icons/fa';
 import { ThemeProvider, useTheme } from '@/app/context/ThemeContext';
-import { projects } from '@/app/data';
+import { useLanguage } from '@/app/context/LanguageContext';
+import { getProjects } from '@/app/data';
 import { notFound } from 'next/navigation';
 
 function ProjectDetail({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const { isDark } = useTheme();
+  const { t } = useLanguage();
 
+  const projects = getProjects(t);
   const project = projects.find((p) => p.id === Number(id));
 
   if (!project) {
@@ -36,7 +39,7 @@ function ProjectDetail({ params }: { params: Promise<{ id: string }> }) {
             }`}
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to home
+            {t.projectDetail.backHome}
           </Link>
 
           <div className={`border rounded-2xl p-6 md:p-10 backdrop-blur-sm transition-colors duration-300 ${
@@ -92,7 +95,7 @@ function ProjectDetail({ params }: { params: Promise<{ id: string }> }) {
                 <h2 className={`text-sm font-semibold font-mono mb-3 uppercase tracking-wider ${
                   isDark ? 'text-white/40' : 'text-neutral-500'
                 }`}>
-                  Key Features
+                  {t.projectDetail.keyFeatures}
                 </h2>
                 <ul className="space-y-2">
                   {project.features.map((feature, idx) => (
@@ -130,7 +133,7 @@ function ProjectDetail({ params }: { params: Promise<{ id: string }> }) {
                   }`}
                 >
                   <ExternalLink className="w-4 h-4" />
-                  Live Demo
+                  {t.projectDetail.liveDemo}
                 </a>
               )}
               {project.githubUrl && (
@@ -145,7 +148,7 @@ function ProjectDetail({ params }: { params: Promise<{ id: string }> }) {
                   }`}
                 >
                   <FaGithubIcon className="w-4 h-4" />
-                  Source Code
+                  {t.projectDetail.sourceCode}
                 </a>
               )}
             </div>

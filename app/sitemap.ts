@@ -1,9 +1,9 @@
 import type { MetadataRoute } from 'next';
-import { projects } from './data';
+import { projectIds } from './data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const projectEntries = projects.map((project) => ({
-    url: `https://alber701h.vercel.app/projects/${project.id}`,
+  const projectEntries = projectIds.map((id) => ({
+    url: `https://alber701h.vercel.app/projects/${id}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,

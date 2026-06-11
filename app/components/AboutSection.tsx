@@ -22,19 +22,9 @@ const paraVariant = {
   }),
 };
 
-function renderHighlight(part: string, i: number, isDark: boolean, lang: string) {
-  if (part === '{highlight1}') {
-    return <span key={i} className={isDark ? 'text-white/80 font-medium' : 'text-neutral-900 font-medium'}>{lang === 'pt' ? 'inteiro' : 'entire'}</span>;
-  }
-  if (part === '{highlight2}') {
-    return <span key={i} className={isDark ? 'text-white/80 font-medium' : 'text-neutral-900 font-medium'}>{lang === 'pt' ? 'utilizável' : 'usable'}</span>;
-  }
-  return <span key={i}>{part}</span>;
-}
-
 export default function AboutSection({ skills }: AboutSectionProps) {
   const { isDark } = useTheme();
-  const { t, lang } = useLanguage();
+  const { t } = useLanguage();
   const [typedText, setTypedText] = useState('');
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
@@ -51,7 +41,7 @@ export default function AboutSection({ skills }: AboutSectionProps) {
     return () => clearInterval(typeInterval);
   }, [t.about.heading]);
 
-  const paragraphs = t.about.body.split('\n\n').map((p) => p.split(/(\{highlight1\}|\{highlight2\})/));
+  const paragraphs = t.about.body.split('\n\n');
 
   return (
     <motion.section
@@ -71,7 +61,7 @@ export default function AboutSection({ skills }: AboutSectionProps) {
             </p>
 
             <div className="space-y-5">
-              {paragraphs.map((parts, pIdx) => (
+              {paragraphs.map((p, pIdx) => (
                 <motion.p
                   key={pIdx}
                   className={`text-sm md:text-base leading-relaxed transition-colors duration-300 ${isDark ? 'text-white/50' : 'text-neutral-600'}`}
@@ -81,7 +71,7 @@ export default function AboutSection({ skills }: AboutSectionProps) {
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  {parts.map((part, i) => renderHighlight(part, i, isDark, lang))}
+                  {p}
                 </motion.p>
               ))}
             </div>
@@ -164,7 +154,7 @@ export default function AboutSection({ skills }: AboutSectionProps) {
                     : 'text-neutral-400 hover:text-neutral-700 hover:bg-neutral-100'
               }`}
             >
-              All
+              {t.about.all}
             </button>
             {skills.map((s) => (
               <button

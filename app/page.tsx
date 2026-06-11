@@ -9,7 +9,8 @@ import ProjectsCarousel from './components/ProjectsCarousel';
 import AboutSection from './components/AboutSection';
 import ExperienceSection from './components/ExperienceSection';
 import Footer from './components/Footer';
-import { projects, skills, workExperience, socialLinks } from './data';
+import { useLanguage } from './context/LanguageContext';
+import { getProjects, getSkills, getWorkExperience, socialLinks } from './data';
 
 export default function Home() {
   return (
@@ -21,6 +22,11 @@ export default function Home() {
 
 function HomeContent() {
   const { isDark } = useTheme();
+  const { t } = useLanguage();
+
+  const projects = getProjects(t);
+  const skills = getSkills(t);
+  const workExperience = getWorkExperience(t);
 
   return (
     <div

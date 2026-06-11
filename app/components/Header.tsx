@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sun, Moon, FileDown, FileText, Languages } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
-import { cvUrl, resumeUrl } from '../data';
 
 export default function Header() {
   const { isDark, toggleTheme } = useTheme();
@@ -116,7 +115,7 @@ export default function Header() {
 
           {/* Resume View */}
           <a
-            href={resumeUrl}
+            href={t.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className={`p-2 rounded-full transition-all duration-300 ${styles.btn.base}`}
@@ -128,7 +127,7 @@ export default function Header() {
 
           {/* CV Download */}
           <a
-            href={cvUrl}
+            href={t.resumeUrl}
             download
             className={`p-2 rounded-full transition-all duration-300 ${styles.btn.base}`}
             aria-label={t.header.downloadCV}

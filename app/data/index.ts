@@ -1,84 +1,61 @@
 import type { Project, Skill, WorkExperience, Certification, SocialLink } from '../types';
 import { Monitor, Brain, Rocket, Palette, Shield, Puzzle } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import type { Translation } from '../translations';
 
-export const cvUrl = '/resume.pdf';
-export const resumeUrl = '/resume.pdf';
+export const projectIds = [1, 2, 3, 4, 5];
 
-export const projects: Project[] = [
+export const getProjects = (t: Translation): Project[] => [
   {
     id: 1,
-    title: 'Cur10usX',
-    description: 'A student platform that turns academic data into portfolios, growth, and career opportunities.',
-    longDescription: 'Cur10usX is a comprehensive student platform designed to bridge the gap between academic performance and career development. It automatically transforms grades, projects, and achievements into professional portfolios, tracks growth metrics, and connects students with relevant opportunities.',
+    title: t.projectsData.cur10usx.title,
+    description: t.projectsData.cur10usx.description,
+    longDescription: t.projectsData.cur10usx.longDescription,
     image: '/api/preview?url=https://cur10usx.vercel.app',
     tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Prisma', 'Docker'],
-    features: [
-      'Automated portfolio generation from academic data',
-      'Growth tracking with visual analytics',
-      'Career opportunity matching',
-      'Real-time collaboration tools',
-    ],
-    liveUrl: 'https://cur10us-sm.vercel.app',
-    githubUrl: 'https://github.com/ahamuyel/cur10us-sm',
+    features: [...t.projectsData.cur10usx.features],
+    liveUrl: 'https://cur10usx.vercel.app',
+    githubUrl: 'https://github.com/ahamuyel/cur10usx',
   },
   {
     id: 2,
-    title: 'Fullstack Social Media App',
-    description: 'A full stack social media app with authentication, using React, Supabase, PostgreSQL, TailwindCSS and TypeScript.',
-    longDescription: 'A feature-rich social media platform built with modern web technologies. Includes user authentication, real-time posts, direct messaging, and a responsive feed with infinite scroll.',
+    title: t.projectsData.socialMedia.title,
+    description: t.projectsData.socialMedia.description,
+    longDescription: t.projectsData.socialMedia.longDescription,
     tags: ['TypeScript', 'Supabase', 'PostgreSQL', 'React', 'TailwindCSS'],
-    features: [
-      'User authentication with Supabase',
-      'Real-time feed with infinite scroll',
-      'Direct messaging system',
-      'Profile customization',
-    ],
+    features: [...t.projectsData.socialMedia.features],
     githubUrl: 'https://github.com/alber701h',
   },
   {
     id: 3,
-    title: 'REST APIs with Node.js',
-    description: 'Scalable REST APIs using Node.js, Express, and MongoDB with authentication and rate limiting.',
-    longDescription: 'A production-ready REST API boilerplate with JWT authentication, rate limiting, request validation, and comprehensive error handling. Built following clean architecture principles.',
+    title: t.projectsData.restApi.title,
+    description: t.projectsData.restApi.description,
+    longDescription: t.projectsData.restApi.longDescription,
     tags: ['Node.js', 'Express', 'MongoDB', 'REST API'],
-    features: [
-      'JWT-based authentication & authorization',
-      'Rate limiting & request validation',
-      'Comprehensive error handling',
-      'Swagger API documentation',
-    ],
+    features: [...t.projectsData.restApi.features],
     githubUrl: 'https://github.com/ahamuyel/ready-API',
   },
   {
     id: 4,
-    title: '42 Common Core — C & Systems',
-    description: 'Low-level programming projects from 42 Luanda — systems programming, memory management, and algorithms in C.',
-    longDescription: 'Part of 42 Luanda\'s Common Core curriculum. Built foundational systems-level projects entirely in C — from implementing a printf clone and a shell (minishell) to building a 3D wireframe renderer (FdF). These projects taught me memory management, process control, file I/O, and the discipline of working without a garbage collector.',
+    title: t.projectsData.cSystems.title,
+    description: t.projectsData.cSystems.description,
+    longDescription: t.projectsData.cSystems.longDescription,
     tags: ['C', 'Systems Programming', 'Memory Management', 'Algorithms', 'Unix'],
-    features: [
-      'Built a printf clone handling multiple format specifiers and flags',
-      'Developed a minimal Unix shell with pipes, redirections, and built-ins',
-      'Created a 3D wireframe renderer using Bresenham\'s line algorithm',
-    ],
+    features: [...t.projectsData.cSystems.features],
   },
   {
     id: 5,
-    title: '42 Common Core — C++ & OOP',
-    description: 'Object-oriented projects in C++ exploring inheritance, polymorphism, templates, and STL.',
-    longDescription: 'A series of C++ modules and projects completed at 42 Luanda covering the full OOP spectrum — from classes and member functions to templates, smart pointers, and STL containers. Each module added complexity: fixed-size allocators, iterator patterns, container re-implementations, and type-safe generic programming.',
+    title: t.projectsData.cppOop.title,
+    description: t.projectsData.cppOop.description,
+    longDescription: t.projectsData.cppOop.longDescription,
     tags: ['C++', 'OOP', 'Templates', 'STL', 'Design Patterns'],
-    features: [
-      'Reimplemented STL containers (vector, map, stack) from scratch',
-      'Built a fixed-size memory allocator with placement new',
-      'Explored multiple inheritance, virtual tables, and RAII patterns',
-    ],
+    features: [...t.projectsData.cppOop.features],
   },
 ];
 
-export const skills: Skill[] = [
+export const getSkills = (t: Translation): Skill[] => [
   {
-    category: 'Competências Técnicas (Core)',
+    category: t.skillsData.technical,
     icon: Monitor,
     items: [
       { name: 'Next.js', level: 4.0 },
@@ -96,7 +73,7 @@ export const skills: Skill[] = [
     ],
   },
   {
-    category: 'Engenharia de Software (42 / Base sólida)',
+    category: t.skillsData.software,
     icon: Brain,
     items: [
       { name: 'C++', level: 3.0 },
@@ -110,7 +87,7 @@ export const skills: Skill[] = [
     ],
   },
   {
-    category: 'Produto & Arquitetura',
+    category: t.skillsData.product,
     icon: Rocket,
     items: [
       { name: 'SaaS Development', level: 3.0 },
@@ -123,7 +100,7 @@ export const skills: Skill[] = [
     ],
   },
   {
-    category: 'Frontend & UX',
+    category: t.skillsData.frontend,
     icon: Palette,
     items: [
       { name: 'UI/UX Design', level: 3.0 },
@@ -133,7 +110,7 @@ export const skills: Skill[] = [
     ],
   },
   {
-    category: 'Interesse técnico',
+    category: t.skillsData.interest,
     icon: Shield,
     items: [
       { name: 'Cybersecurity', level: 2.0 },
@@ -142,7 +119,7 @@ export const skills: Skill[] = [
     ],
   },
   {
-    category: 'Soft Skills',
+    category: t.skillsData.soft,
     icon: Puzzle,
     items: [
       { name: 'Problem Solving', level: 4.5 },
@@ -155,36 +132,28 @@ export const skills: Skill[] = [
   },
 ];
 
-export const workExperience: WorkExperience[] = [
+export const getWorkExperience = (t: Translation): WorkExperience[] => [
   {
     period: 'Jan 2025 - Present',
     company: 'Cur10usX',
-    role: 'Founder & Lead Developer',
+    role: t.experienceData.cur10usx.role,
     tech: 'Self-employed',
     startDate: '2025-01',
     location: 'Luanda, Angola · Remote',
     url: 'https://cur10usx.vercel.app',
     stack: 'Next.js · Node.js · PostgreSQL · Prisma ORM · Docker · Kubernetes · Nginx',
-    description: 'Building an EdTech SaaS platform from scratch to digitalize school management in Angola and empower students with tools to track their academic growth.',
-    highlights: [
-      'Architected a multi-tenant system with role-based access control and complex authentication flows',
-      'Built bulk data import, exportable reports, and a real-time guardian dashboard',
-      'Managing all product and technical decisions as sole developer',
-    ],
+    description: t.experienceData.cur10usx.description,
+    highlights: [...t.experienceData.cur10usx.highlights],
   },
   {
     period: 'May 2024 - Present',
     company: '42 Luanda',
-    role: 'Student (Common Core)',
+    role: t.experienceData.school42.role,
     tech: 'Software Development',
     startDate: '2024-05',
     url: 'https://42.fr',
-    description: '42 is a global engineering school with no teachers and no traditional classes — learning happens entirely through projects and peer collaboration. Ranked among the top programming schools worldwide, with 50+ campuses in 30+ countries.',
-    highlights: [
-      'Completing the Common Core covering C, algorithms, OS, memory management, networking, and web development',
-      'Built projects spanning low-level programming, infrastructure, and full-stack web',
-      'Developed strong problem-solving and autonomous learning skills under pressure',
-    ],
+    description: t.experienceData.school42.description,
+    highlights: [...t.experienceData.school42.highlights],
   },
 ];
 
@@ -201,4 +170,12 @@ export const socialLinks: SocialLink[] = [
   { icon: FaGithub, label: 'GitHub', url: 'https://github.com/ahamuyel' },
   { icon: FaLinkedin, label: 'LinkedIn', url: 'https://linkedin.com/in/alber701h' },
   { icon: FaInstagram, label: 'Instagram', url: 'https://instagram.com/alber701h' },
+];
+
+export const navItems = (t: Translation) => [
+  { label: t.nav.about, href: '#about' },
+  { label: t.nav.projects, href: '#projects' },
+  { label: t.nav.skills, href: '#skills' },
+  { label: t.nav.experience, href: '#experience' },
+  { label: t.nav.contact, href: '#contact' },
 ];

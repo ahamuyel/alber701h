@@ -6,7 +6,6 @@ import { ArrowRight, Sparkles, FileText, ChevronDown } from 'lucide-react';
 import { containerVariants, itemVariants } from '../utils/animations';
 import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
-import { resumeUrl } from '../data';
 
 export default function Hero() {
   const { isDark } = useTheme();
@@ -168,7 +167,7 @@ export default function Hero() {
             </motion.button>
 
             <motion.a
-              href={resumeUrl}
+              href={t.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium border transition-all duration-300 active:scale-95 ${
@@ -202,7 +201,7 @@ export default function Hero() {
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <span className="text-[10px] font-mono tracking-widest uppercase">Scroll</span>
+          <span className="text-[10px] font-mono tracking-widest uppercase">{t.hero.scroll}</span>
           <ChevronDown className="w-3.5 h-3.5" />
         </motion.div>
       </motion.div>
